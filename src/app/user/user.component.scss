@@ -1,0 +1,29 @@
+.users-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  .item {
+    padding: 20px;
+    border-bottom: 3px solid #dbdbdb;
+
+    .link {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: #000;
+
+      .name {
+        font-size: 1.75rem;
+        margin: 0 0 20px;
+      }
+
+      .email {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        font-weight: 100;
+      }
+    }
+  }
+}

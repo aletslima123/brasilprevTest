@@ -1,0 +1,10 @@
+<section *ngIf="results$ | async as usersList">
+  <ul class="users-list">
+    <li class="item" *ngFor="let user of usersList">
+      <a class="link" [routerLink]="user.login.username">
+        <h3 class="name">{{ user.name.first }} {{ user.name.last }}</h3>
+        <span class="email">{{ user.email }}</span>
+      </a>
+    </li>
+  </ul>
+</section>

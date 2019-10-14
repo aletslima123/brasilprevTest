@@ -1,0 +1,27 @@
+<section class="profile">
+  <div class="picture-container">
+    <img class="image" [src]="user.picture.large" [alt]="user.name.first + '`s profile picture'"
+      [title]="user.name.first + '`s profile picture'">
+  </div>
+  <h3 class="name">
+    {{ user.name.first }} {{ user.name.last }}
+  </h3>
+  <div class="data-group">
+    <span class="label">Data de nascimento:</span> {{ user.dob.date | date : 'dd/MM/yyyy'}}
+  </div>
+  <div class="data-group">
+    <span class="label">Telefone:</span> {{ user.phone }}
+  </div>
+  <div class="data-group">
+    <span class="label">Celular:</span> {{ user.cell }}
+  </div>
+  <div class="data-group">
+    <span class="label">Endereço:</span>
+    {{ user.location.street.name }} - {{ user.location.street.number }} -
+    {{ user.location.postcode }} -
+    {{ user.location.city }} - {{ user.location.state }} - {{ user.location.country }}
+  </div>
+    <div class="button-container">
+      <a class="back-button" routerLink="/user">Voltar</a>
+    </div>
+</section>
